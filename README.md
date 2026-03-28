@@ -1,6 +1,6 @@
 # FinanceApp
 
-A macOS portfolio simulator that uses **Monte Carlo block bootstrap** to model realistic multi-year investment growth — preserving real-world return clustering and volatility patterns from historical data.
+A macOS portfolio simulator that uses **Monte Carlo block bootstrap** to model realistic multi-year investment growth preserving real-world return clustering and volatility patterns from historical data.
 
 ![FinanceApp Dashboard](images/Finance-App-Demo.png)
 
@@ -11,24 +11,24 @@ A macOS portfolio simulator that uses **Monte Carlo block bootstrap** to model r
 You configure a portfolio of assets (tickers + weights), an initial investment, a time horizon, and a tax treatment. The backend runs thousands of simulations by resampling historical year-blocks with replacement, then the app displays the full outcome distribution as a growth projection cone and percentile breakdown table.
 
 **Key outputs:**
-- **Median Outcome** — 50th percentile final value
-- **Conservative** — 10th percentile (bad luck scenario)
-- **Optimistic** — 90th percentile (good luck scenario)
-- **Median CAGR** — annualized return at the median
+- **Median Outcome** 50th percentile final value
+- **Conservative** 10th percentile (bad luck scenario)
+- **Optimistic** 90th percentile (good luck scenario)
+- **Median CAGR** annualized return at the median
 
 ---
 
 ## Features
 
-- **Block Bootstrap Monte Carlo** — resamples historical year-blocks to capture realistic autocorrelation and volatility clustering, not just random i.i.d. returns
-- **Long horizon support** — simulates beyond available history by resampling year-blocks with replacement (up to 100 years)
+- **Block Bootstrap Monte Carlo** resamples historical year-blocks to capture realistic autocorrelation and volatility clustering, not just random i.i.d. returns
+- **Long horizon support** simulates beyond available history by resampling year-blocks with replacement (up to 100 years)
 - **3 account types with accurate tax modeling:**
-  - **Brokerage** — capital gains tax applied only to profits at withdrawal
-  - **Roth IRA** — contributions taxed upfront; no tax at withdrawal
-  - **401k** — full balance taxed as ordinary income at withdrawal
-- **Growth Only Mode** — toggle off taxes to preview pure accumulation (no withdrawal assumed)
-- **Configurable portfolio** — any mix of tickers with custom weights
-- **Percentile breakdown** — 10th / 25th / 50th / 75th / 90th with final value, multiple, and CAGR
+  - **Brokerage** capital gains tax applied only to profits at withdrawal
+  - **Roth IRA** contributions taxed upfront; no tax at withdrawal
+  - **401k** full balance taxed as ordinary income at withdrawal
+- **Growth Only Mode** toggle off taxes to preview pure accumulation (no withdrawal assumed)
+- **Configurable portfolio** any mix of tickers with custom weights
+- **Percentile breakdown** 10th / 25th / 50th / 75th / 90th with final value, multiple, and CAGR
 - **Probability of Profit** and **Probability of 2x** displayed at a glance
 
 ---
@@ -115,4 +115,4 @@ Tax is applied at the **end of the selected time horizon**, modeling a full with
 | Roth IRA | Nothing | Tax paid on contributions before investing |
 | 401k | Full balance | Ordinary income tax rate |
 
-> **Growth Only Mode** bypasses all tax calculations — useful for checking long-term accumulation without assuming a withdrawal.
+> **Growth Only Mode** bypasses all tax calculations useful for checking long-term accumulation without assuming a withdrawal.
